@@ -63,11 +63,9 @@ const renderToy = (toy) => {
   img.className = 'toy-avatar'
   p.innerHTML = `<span>${likes}</span> likes`
   button.innerText = 'Like <3'
-  button.className = 'like-btn'
   div.className = 'card'
   div.id = toy.id
-  h2.id = 'toy-header'
-  div.append(h2, img, p, button)
+  div.append(h2, img, button, p)
   toyCollection.append(div)
 }
 
