@@ -42,9 +42,7 @@ const handleSubmit = (e) => {
     .then(data => {
       renderToy(data)
       e.target.reset()
-    }
-
-    )
+    })
 }
 
 const renderToy = (toy) => {
@@ -77,8 +75,6 @@ const handleLike = (e) => {
   let img = e.currentTarget.querySelector('img').src
   let name = e.currentTarget.querySelector('h2').innerText
   let body = {
-    name: name,
-    image: img,
     likes: ++likes
   }
   fetch(`http://localhost:3000/toys/${id}`, 
